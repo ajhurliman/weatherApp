@@ -10,12 +10,12 @@
     <!-- Even though node_modules is in the root of the repo, yoke will resolve it correctly -->
     <link data-aero-build="debug" rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link data-aero-build="debug" rel="stylesheet" href="css/styles.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <div ng-app="spaWorkshop">
-      <section ng-view></section>
+      <section class="body-content" ng-view></section>
     </div>
 
     <!-- Consolidated release script which will be stripped from debug builds  -->

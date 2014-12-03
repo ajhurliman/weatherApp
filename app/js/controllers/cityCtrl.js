@@ -6,7 +6,7 @@ angular.module('controllers').controller('CityCtrl', function($scope, $routePara
 
   // Need to assign this to another variable in order to use it in nested contexts.
   var self = this;
-
+  
   // Flatten the promise chain for better readability.
   // http://solutionoptimist.com/2013/12/27/javascript-promise-chains-2/
   geoLocation(this.cityName)
@@ -15,6 +15,8 @@ angular.module('controllers').controller('CityCtrl', function($scope, $routePara
     })
     .then(function(forecast) {
       self.forecast = forecast.data;
+      self.hourly = forecast.data.hourly.data;
+      console.log(self.forecast);
       return news(self.cityName);
     })
     .then(function(news) {

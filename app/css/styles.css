@@ -1,5 +1,39 @@
 body {
-  padding: 100px;
-  font-family: 'Open Sans',sans-serif;
-  background-color: #FFF;
-}
+  font-family: "Oxygen", Arial; }
+
+.body-content {
+  width: 90%;
+  margin: auto; }
+
+/* Modules */
+.hourly-weather {
+  overflow: scroll; }
+  .hourly-weather .moments {
+    width: 7600px; }
+
+.moment {
+  display: inline-block;
+  background: #eee;
+  width: 125px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+  color: #333; }
+  .moment h1 {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 3px 0;
+    color: #2e62b7;
+    letter-spacing: 2px; }
+  .moment h2 {
+    margin: 2px 0;
+    font-size: 1em; }
+  .moment ul {
+    padding: 0; }
+    .moment ul li {
+      list-style-type: none; }
+  .moment .moment-details {
+    font-size: 0.8em; }
+
+/*# sourceMappingURL=styles.css.map */

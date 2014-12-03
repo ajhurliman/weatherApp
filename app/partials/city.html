@@ -1,7 +1,19 @@
 <h1>{{this.cityName}}</h1>
-
 <h3>Forecast</h3>
-<div>{{this.forecast | json}}</div>
 
+<h4>Hourly Forecast</h4>
+<div class="hourly-weather">
+  <ul class="moments">
+    <li class="moment" ng-repeat="hour in this.hourly">
+      <h1>{{ hour.time * 1000 | date:'ha' }}</h1>
+      <h2>{{ hour.temperature | number:0 }}&deg;F</h2>
+      <h2>{{ hour.summary }}</h2>
+      <ul class="moment-details">
+        <li>Humiditiy: {{ hour.humidity }}</li>
+        <li>Visibility: {{ hour.visibility }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 <h3>News</h3>
 <div>{{this.news | json}}</div>
