@@ -16,4 +16,10 @@
   </ul>
 </div>
 <h3>News</h3>
-<div>{{this.news | json}}</div>
+<div class="news">
+  <ul>
+    <li ng-repeat="article in this.news">
+      <a href="{{ article.href }}">{{ article.title }}</a>
+    </li>
+  </ul>
+</div>

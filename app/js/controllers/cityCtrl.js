@@ -16,7 +16,6 @@ angular.module('controllers').controller('CityCtrl', function($scope, $routePara
     .then(function(forecast) {
       self.forecast = forecast.data;
       self.hourly = forecast.data.hourly.data;
-      console.log(self.forecast);
       return news(self.cityName);
     })
     .then(function(news) {
