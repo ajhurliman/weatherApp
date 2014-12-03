@@ -1,6 +1,23 @@
 <h1>{{this.cityName}}</h1>
-<h3>Forecast</h3>
-
+<h3>Daily Forecast</h3>
+<ul class='moments'>
+  <li class='moment' ng-repeat='day in this.daily'>
+    <h1>
+      {{day.time * 1000 | date:'MMM d, EEE'}}
+    </h1>
+    <h2>
+      High: {{day.apparentTemperatureMax}}</br>
+      Low: {{day.apparentTemperatureMin}}
+    </h2>
+    </h3>
+      humidity: {{day.humidity}} </br>
+      visibility: {{day.visibility}}
+    </h3>
+    <h3>
+      {{day.summary}}
+    </h3>
+  </li>
+</ul>
 <h4>Hourly Forecast</h4>
 <div class="hourly-weather">
   <ul class="moments">
